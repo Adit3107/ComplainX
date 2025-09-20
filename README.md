@@ -40,14 +40,27 @@ cd complainx
 npm install
 
 ```bash
-# .env.local
-MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/complainx
+## .env.local
+# MongoDB Configuration
+MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/<database_name>
+
+# JWT Configuration
+JWT_SECRET=your-jwt-secret-key
+JWT_EXPIRES_IN=7d
+
+# Email Configuration (SMTP)
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
-SMTP_USER=your-email@gmail.com
-SMTP_PASS=your-app-password
-SMTP_FROM="ComplainX <your-email@gmail.com>"
-ADMIN_EMAIL=admin@yourcompany.com
+SMTP_USER=your-email@example.com
+SMTP_PASS=your-app-password-here
+SMTP_FROM="ComplaintHub <your-email@example.com>"
+
+# Admin Configuration
+ADMIN_EMAIL=your-email@example.com
+
+# Next.js Configuration
+NEXTAUTH_SECRET=your-nextauth-secret
+NEXTAUTH_URL=http://localhost:3000
 
 ## Run the Application
 ```bash
